@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory name="hib">
+		  <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		  <property name="hibernate.show_sql">true</property>
+		  <property name="hibernate.hbm2ddl.auto">validate</property>
+		  <property name="hibernate.current_session_context_class">thread</property>
+		  <property name="hibernate.format_sql">false</property>
+		  <property name="hibernate.connection.datasource">oracle-res</property>
+		  <property name="hibernate.transaction.auto_close_session">true</property>
+		  <property name="hibernate.transaction.flush_before_completion">true</property>
+		  <property name="hibernate.transaction.manager_lookup_class">org.hibernate.transaction.SunONETransactionManagerLookup</property>
+		  <property name="hibernate.transaction.factory_class">org.hibernate.transaction.CMTTransactionFactory</property>
+		  <mapping resource="it/univaq/mwt/fastmarket/business/model/Role.hbm.xml"/>
+		  <mapping resource="it/univaq/mwt/fastmarket/business/model/User.hbm.xml"/>
+		  <mapping resource="it/univaq/mwt/fastmarket/business/model/Brand.hbm.xml"/>
+		  <mapping resource="it/univaq/mwt/fastmarket/business/model/IntoleranceCategory.hbm.xml"/>
+		  <mapping resource="it/univaq/mwt/fastmarket/business/model/Category.hbm.xml"/>
+		  <mapping resource="it/univaq/mwt/fastmarket/business/model/Product.hbm.xml"/>
+		  <mapping resource="it/univaq/mwt/fastmarket/business/model/CartLine.hbm.xml"/>
+		  <mapping resource="it/univaq/mwt/fastmarket/business/model/Cart.hbm.xml"/>
+		  <mapping resource="it/univaq/mwt/fastmarket/business/model/SystemInformation.hbm.xml"/>
+		  <mapping resource="it/univaq/mwt/fastmarket/business/model/Region.hbm.xml"/>
+		  <mapping resource="it/univaq/mwt/fastmarket/business/model/Province.hbm.xml"/>
+		  <mapping resource="it/univaq/mwt/fastmarket/business/model/District.hbm.xml"/>
+		  <mapping resource="it/univaq/mwt/fastmarket/business/model/Address.hbm.xml"/>
+		  <mapping resource="it/univaq/mwt/fastmarket/business/model/Order.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>
